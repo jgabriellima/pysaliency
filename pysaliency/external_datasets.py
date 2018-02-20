@@ -908,10 +908,9 @@ def _get_SALICON(data_type, stimuli_url, stimuli_hash, fixation_url, fixation_ha
         download_and_check(stimuli_url,
                            os.path.join(temp_dir, 'stimuli.zip'),
                            stimuli_hash)
+        temp_dir = '/data/Desktop/datasets/old_salicon'
         if fixation_url is not None:
-            download_and_check(fixation_url,
-                               os.path.join(temp_dir, 'fixations.json'),
-                               fixation_hash)
+            download_and_check(fixation_url,os.path.join(temp_dir, 'fixations.json'), fixation_hash)
         # Stimuli
 
         annFile = os.path.join(temp_dir, 'fixations.json')
